@@ -1,0 +1,13 @@
+{
+  "extends": "iamnapo",
+  "rules": {
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "max-len": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "camelcase": "off",
+    "jsx-a11y/accessible-emoji": "off",
+    "react/no-unescaped-entities": "off"
+  }
+}

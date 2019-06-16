@@ -1,0 +1,56 @@
+{
+  "name": "twitter-web-data-mining",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demonstration of our Twitter Project of Web Data Mining course",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamnapo/tesla-web-mining"
+  },
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Napoleon-Christos Oikonomou",
+      "email": "Napoleonoikon@gmail.com",
+      "url": "https://iamnapo.me"
+    },
+    {
+      "name": "Maria Kouvela",
+      "email": "marykouvela@gmail.com"
+    }
+  ],
+  "scripts": {
+    "build": "del-cli '.cache' 'public' && gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve -H 0.0.0.0 -p 8000 -o",
+    "test": "eslint ."
+  },
+  "dependencies": {
+    "gatsby": "^2.9.4",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-offline": "^2.1.3",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "node-sass": "^4.12.0",
+    "plotly.js": "^1.48.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-plotly.js": "^2.3.0",
+    "react-scroll-to-element": "^0.2.0",
+    "react-scrollspy": "^3.4.0",
+    "react-waypoint": "^9.0.2",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "del-cli": "^2.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-iamnapo": "^1.0.4",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0"
+  }
+}
