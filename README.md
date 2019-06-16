@@ -43,4 +43,18 @@ All of the steps below require that you have already installed:
 - Join the three parts of the .gz file into one, using something like:
   - Windows: `type twitter_search.bson.gz.* > twitter_search.bson.gz`
   - Linux/MacOS: `cat twitter_search.bson.gz.* > twitter_search.bson.gz`
-- Use the [`mongorestore`](https://docs.mongodb.com/manual/reference/program/mongorestore/) in conjuction with the `--gzip` option.
+- Use the [`mongorestore`](https://docs.mongodb.com/manual/reference/program/mongorestore/) command, in conjuction with the `--gzip` option.
+
+### Python scripts
+
+- Install dependencies from [`analysis-scripts/requirements.txt`](./analysis-scripts/requirements.txt)
+- Download necessary nltk files. In a python3 shell:
+
+  ```python
+  >>> import nltk
+  >>> nltk.download('stopwords')
+  >>> nltk.download('punkt')
+  ```
+
+- Make sure to set each script's required environment variables before executing it!
+- Also, again, make sure that you have at least 3.6 Python, because these script use [f literals](https://www.python.org/dev/peps/pep-0498/).
