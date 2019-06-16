@@ -5,8 +5,8 @@
 ## Repository structure
 
 - In the root of this repository there are the required files to deploy the website. There is already an online version available at Netlify. (Just press the button above)
-- In the `dataset/` folder there is a dump of the MongoDB database that we used for our analyses.
-- In the `analysis-scripts/` folder there are all the various scripts that we used for out analyses.
+- In the [`dataset/`](./dataset) folder there is a dump of the MongoDB database that we used for our analyses.
+- In the [`analysis-scripts/`](./analysis-scripts) folder there are all the various scripts that we used for out analyses.
 
 ## Usage
 
@@ -40,4 +40,7 @@ All of the steps below require that you have already installed:
 ### Mongo dataset
 
 - Download the dump from the [`dataset/`](./dataset) folder.
+- Join the three parts of the .gz file into one, using something like:
+  - Windows: `type twitter_search.bson.gz.* > twitter_search.bson.gz`
+  - Linux/MacOS: `cat twitter_search.bson.gz.* > twitter_search.bson.gz`
 - Use the [`mongorestore`](https://docs.mongodb.com/manual/reference/program/mongorestore/) in conjuction with the `--gzip` option.

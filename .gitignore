@@ -8,3 +8,13 @@ yarn.lock
 # Build directory
 /public
 .DS_Store
+
+# Python cache
+__pychache__
+*.pyc
+
+# .env files
+.env
+
+# Pycharm files
+.idea
