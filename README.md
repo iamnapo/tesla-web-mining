@@ -2,11 +2,13 @@
 
 [![Netlify](https://api.netlify.com/api/v1/badges/d2a44cad-ed48-404e-b976-cdfbe125a320/deploy-status)](https://twitter-analysis.netlify.com)
 
+<h2 align="center"><a href="./report.pdf" download>Our report</a></h2>
+
 ## Repository structure
 
 - In the root of this repository there are the required files to deploy the website. There is already an online version available at Netlify. (Just press the button above)
 - In the [`dataset/`](./dataset) folder there is a dump of the MongoDB database that we used for our analyses.
-- In the [`analysis-scripts/`](./analysis-scripts) folder there are all the various scripts that we used for out analyses.
+- In the [`analysis-scripts/`](./analysis-scripts) folder there are all the various scripts that we used for our analyses.
 
 ## Usage
 
