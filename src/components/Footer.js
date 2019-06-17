@@ -1,4 +1,5 @@
 import React from 'react';
+import report from '../assets/report.pdf';
 
 const Footer = () => (
   <footer id="footer">
@@ -12,11 +13,11 @@ const Footer = () => (
         <dt>Scripts:</dt>
         <dd><a href="https://github.com/iamnapo/tesla-web-mining/tree/master/analysis-scripts">https://github.com/iamnapo/tesla-web-mining/tree/master/analysis-scripts</a></dd>
         <dt>Report:</dt>
-        <dd><a href="https://github.com/iamnapo/tesla-web-mining/blob/master/report.pdf">https://github.com/iamnapo/tesla-web-mining/blob/master/report.pdf</a></dd>
+        <dd><a href={report} download="report.pdf">report.pdf</a></dd>
       </dl>
     </section>
     <p className="copyright">
-      {'Made with ❤️ using '}
+      {'Made with ❤️ by Napoleon & Mary using '}
       <a href="https://github.com/codebushi/gatsby-starter-stellar">Gatsby.js</a>
     </p>
   </footer>
