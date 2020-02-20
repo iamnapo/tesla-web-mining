@@ -1,9 +1,8 @@
 {
+	"parser": "babel-eslint",
 	"extends": "iamnapo",
 	"rules": {
-		"react/require-default-props": "off",
 		"react/prop-types": "off",
-		"react/destructuring-assignment": "off",
 		"max-len": "off",
 		"jsx-a11y/anchor-is-valid": "off",
 		"camelcase": "off",
