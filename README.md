@@ -14,7 +14,7 @@
 
 All of the steps below require that you have already installed:
 
-- [Node.js 10.4 or later](https://nodejs.org/en/)
+- [Node.js 12.13 or later](https://nodejs.org/en/)
 - [Python 3.6 or later](https://www.python.org/)
 - [MongoDB 4.0 or later](https://www.mongodb.com)
 
