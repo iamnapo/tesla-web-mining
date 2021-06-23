@@ -22,7 +22,7 @@ import ovPolarityPerDay from "../assets/jsons/ov_polarity_per_day.json";
 import geoLocJson from "../assets/jsons/geo_loc.json";
 import loc from "../assets/images/loc.png";
 
-const Plot = createPlotlyComponent(Plotly);
+const Plot = typeof (window) === "undefined" ? () => <div /> : createPlotlyComponent(Plotly);
 
 const Index = () => {
 	const [stickyNav, setStickyNav] = React.useState(false);
@@ -46,14 +46,12 @@ const Index = () => {
 							{" '#Tesla', '#TeslaMotors', '#ElonMusk', '#Elon', '#Model3', '#ModelX', '#ModelY', '#TeslaRoadster'"}
 						</p>
 					</header>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={[{ x: tweetsTime, type: "histogram", marker: { color: "blue", opacity: 0.75 } }]}
-							layout={{ bargap: 0.2, autosize: true }}
-							useResizeHandler
-							style={{ width: "100%" }}
-						/>
-					)}
+					<Plot
+						data={[{ x: tweetsTime, type: "histogram", marker: { color: "blue", opacity: 0.75 } }]}
+						layout={{ bargap: 0.2, autosize: true }}
+						useResizeHandler
+						style={{ width: "100%" }}
+					/>
 					<p>{"Distribution of 154.717 collected tweets over time"}</p>
 					<br />
 					<br />
@@ -71,22 +69,20 @@ const Index = () => {
 					</header>
 					<div align="center"><img src={mostCommon} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of 200 most common keywords/hashtags"}</p>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={mostCommonJson.data.map((el) => ({
-								x: mostCommonJson.ticks,
-								y: el.y,
-								name: el.name,
-								type: "scatter",
-							}))}
-							layout={{
-								xaxis: { ticktext: mostCommonJson.labels, tickvals: mostCommonJson.ticks, showgrid: true },
-								yaxis: { showticklabels: false },
-							}}
-							useResizeHandler
-							style={{ width: "100%" }}
-						/>
-					)}
+					<Plot
+						data={mostCommonJson.data.map((el) => ({
+							x: mostCommonJson.ticks,
+							y: el.y,
+							name: el.name,
+							type: "scatter",
+						}))}
+						layout={{
+							xaxis: { ticktext: mostCommonJson.labels, tickvals: mostCommonJson.ticks, showgrid: true },
+							yaxis: { showticklabels: false },
+						}}
+						useResizeHandler
+						style={{ width: "100%" }}
+					/>
 					<p>{"Distribution of hashtags over time"}</p>
 					<br />
 					<br />
@@ -313,58 +309,52 @@ const Index = () => {
 						<br />
 					</header>
 					<h3 style={{ textAlign: "left" }}><b>{"Overall Sentiment"}</b></h3>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={ovSentimentPerDay.data.map((el) => ({
-								x: ovSentimentPerDay.ticks,
-								y: el.y,
-								name: el.name,
-								type: "bar",
-								marker: { color: el.color },
-							}))}
-							layout={{ xaxis: { ticktext: ovSentimentPerDay.labels, tickvals: ovSentimentPerDay.ticks }, barmode: "relative", autosize: true }}
-							useResizeHandler
-							style={{ width: "100%" }}
-						/>
-					)}
+					<Plot
+						data={ovSentimentPerDay.data.map((el) => ({
+							x: ovSentimentPerDay.ticks,
+							y: el.y,
+							name: el.name,
+							type: "bar",
+							marker: { color: el.color },
+						}))}
+						layout={{ xaxis: { ticktext: ovSentimentPerDay.labels, tickvals: ovSentimentPerDay.ticks }, barmode: "relative", autosize: true }}
+						useResizeHandler
+						style={{ width: "100%" }}
+					/>
 					<p>{"Sentiment of tweets over time"}</p>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={[{
-								x: ovPolarityPerDay.ticks,
-								y: ovPolarityPerDay.data,
-								type: "scatter",
-								mode: "lines+markers",
-								line: { shape: "spline", smoothing: 0.75 },
-							}]}
-							layout={{
-								xaxis: { ticktext: ovPolarityPerDay.labels, tickvals: ovPolarityPerDay.ticks },
-								autosize: true,
-							}}
-							useResizeHandler
-							style={{ width: "100%" }}
-						/>
-					)}
+					<Plot
+						data={[{
+							x: ovPolarityPerDay.ticks,
+							y: ovPolarityPerDay.data,
+							type: "scatter",
+							mode: "lines+markers",
+							line: { shape: "spline", smoothing: 0.75 },
+						}]}
+						layout={{
+							xaxis: { ticktext: ovPolarityPerDay.labels, tickvals: ovPolarityPerDay.ticks },
+							autosize: true,
+						}}
+						useResizeHandler
+						style={{ width: "100%" }}
+					/>
 					<p>{"Polarity of tweets over time"}</p>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={sentPerDayJson.data.map((el) => ({
-								x: sentPerDayJson.ticks,
-								y: el.y,
-								name: el.name,
-								type: "scatter",
-								mode: "lines+markers",
-								line: { shape: "spline", smoothing: 0.75 },
-							}))}
-							layout={{
-								xaxis: { ticktext: sentPerDayJson.labels, tickvals: sentPerDayJson.ticks, showgrid: true },
-								yaxis: { showticklabels: false },
-								autosize: true,
-							}}
-							useResizeHandler
-							style={{ width: "100%" }}
-						/>
-					)}
+					<Plot
+						data={sentPerDayJson.data.map((el) => ({
+							x: sentPerDayJson.ticks,
+							y: el.y,
+							name: el.name,
+							type: "scatter",
+							mode: "lines+markers",
+							line: { shape: "spline", smoothing: 0.75 },
+						}))}
+						layout={{
+							xaxis: { ticktext: sentPerDayJson.labels, tickvals: sentPerDayJson.ticks, showgrid: true },
+							yaxis: { showticklabels: false },
+							autosize: true,
+						}}
+						useResizeHandler
+						style={{ width: "100%" }}
+					/>
 					<p>{"Sentiment value over time"}</p>
 					<br />
 					<br />
@@ -402,40 +392,38 @@ const Index = () => {
 						<h2>{"Geo-location"}</h2>
 						<p>{"In this part of the project, our task is to extract information of users' geographic locations based on their tweets."}</p>
 					</header>
-					{typeof window !== "undefined" && (
-						<Plot
-							data={[{
-								lat: geoLocJson.lat,
-								lon: geoLocJson.lon,
-								mode: "markers",
-								type: "scattergeo",
-								marker: { size: 4, color: geoLocJson.colors },
-								text: geoLocJson.users,
-							}]}
-							layout={{
-								autosize: true,
-								hovermode: "closest",
-								geo: {
-									resolution: 250,
-									showrivers: false,
-									showlakes: false,
-									showland: true,
-									landcolor: "#d3d3d3",
-									countrycolor: "#5f4d93",
-									subunitcolor: "#5f4d93",
-								},
-								margin: {
-									l: 0,
-									r: 0,
-									b: 0,
-									t: 0,
-									pad: 2,
-								},
-							}}
-							useResizeHandler
-							style={{ width: "100%", height: "150%" }}
-						/>
-					)}
+					<Plot
+						data={[{
+							lat: geoLocJson.lat,
+							lon: geoLocJson.lon,
+							mode: "markers",
+							type: "scattergeo",
+							marker: { size: 4, color: geoLocJson.colors },
+							text: geoLocJson.users,
+						}]}
+						layout={{
+							autosize: true,
+							hovermode: "closest",
+							geo: {
+								resolution: 250,
+								showrivers: false,
+								showlakes: false,
+								showland: true,
+								landcolor: "#d3d3d3",
+								countrycolor: "#5f4d93",
+								subunitcolor: "#5f4d93",
+							},
+							margin: {
+								l: 0,
+								r: 0,
+								b: 0,
+								t: 0,
+								pad: 2,
+							},
+						}}
+						useResizeHandler
+						style={{ width: "100%", height: "150%" }}
+					/>
 					<p>{"Location and sentiment of tweets"}</p>
 					<br />
 					<br />
