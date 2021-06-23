@@ -1,11 +1,14 @@
 module.exports = {
 	siteMetadata: {
+		siteUrl: "https://www.tesla.iamnapo.me",
 		title: "Twitter Project of Web Data Mining course",
 		author: "Maria Kouvela, Napoleon-Christos Oikonomou",
 		description: "Demonstration of our Twitter Project of Web Data Mining course",
 	},
 	plugins: [
+		"gatsby-plugin-sass",
 		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-sitemap",
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
@@ -18,7 +21,6 @@ module.exports = {
 				icon: "src/assets/images/website-icon.png",
 			},
 		},
-		"gatsby-plugin-sass",
 		"gatsby-plugin-offline",
 	],
 };

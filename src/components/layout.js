@@ -1,40 +1,27 @@
-import React from "react";
+import * as React from "react";
+
 import "../assets/scss/main.scss";
 
-import Footer from "./Footer";
+import Footer from "./footer";
 
-class Template extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			loading: "is-loading",
-		};
-	}
+const Layout = ({ children }) => {
+	const [loading, setLoading] = React.useState("is-loading");
 
-	componentDidMount() {
-		this.timeoutId = setTimeout(() => {
-			this.setState({ loading: "" });
+	React.useEffect(() => {
+		const timeout = setTimeout(() => {
+			setLoading("");
 		}, 100);
-	}
+		return () => clearTimeout(timeout);
+	});
 
-	componentWillUnmount() {
-		if (this.timeoutId) {
-			clearTimeout(this.timeoutId);
-		}
-	}
-
-	render() {
-		const { children } = this.props;
-
-		return (
-			<div className={`body ${this.state.loading}`}>
-				<div id="wrapper">
-					{children}
-					<Footer />
-				</div>
+	return (
+		<div className={`body ${loading}`}>
+			<div id="wrapper">
+				{children}
+				<Footer />
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
-export default Template;
+export default Layout;

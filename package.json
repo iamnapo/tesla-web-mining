@@ -1,57 +1,72 @@
 {
-  "name": "twitter-web-data-mining",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Demonstration of our Twitter Project of Web Data Mining course",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iamnapo/tesla-web-mining"
-  },
-  "license": "MIT",
-  "contributors": [
-    {
-      "name": "Napoleon-Christos Oikonomou",
-      "email": "Napoleonoikon@gmail.com",
-      "url": "https://iamnapo.me"
-    },
-    {
-      "name": "Maria Kouvela",
-      "email": "marykouvela@gmail.com"
-    }
-  ],
-  "scripts": {
-    "build": "del-cli '.cache' 'public' && gatsby build",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve -H 0.0.0.0 -p 8000 -o",
-    "test": "eslint ."
-  },
-  "dependencies": {
-    "gatsby": "^2.19.19",
-    "gatsby-plugin-manifest": "^2.2.41",
-    "gatsby-plugin-offline": "^3.0.35",
-    "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-sass": "^2.1.29",
-    "node-sass": "^4.13.1",
-    "plotly.js": "^1.52.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-plotly.js": "^2.4.0",
-    "react-scroll-to-element": "^0.2.0",
-    "react-scrollspy": "^3.4.2",
-    "react-waypoint": "^9.0.2",
-    "smoothscroll-polyfill": "^0.4.4"
-  },
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "del-cli": "^3.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-iamnapo": "^2.2.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-unicorn": "^16.1.1"
-  }
+	"name": "twitter-web-data-mining",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Demonstration of our Twitter Project of Web Data Mining course",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/iamnapo/tesla-web-mining"
+	},
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "Napoleon-Christos Oikonomou",
+			"email": "Napoleonoikon@gmail.com",
+			"url": "https://iamnapo.me"
+		},
+		{
+			"name": "Maria Kouvela",
+			"email": "marykouvela@gmail.com"
+		}
+	],
+	"scripts": {
+		"build": "gatsby build",
+		"develop": "gatsby develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"test": "eslint . --cache"
+	},
+	"eslintConfig": {
+		"extends": "iamnapo/with-react",
+		"rules": {
+			"no-unused-vars": [
+				"error",
+				{
+					"varsIgnorePattern": "React"
+				}
+			],
+			"unicorn/prefer-module": "off",
+			"react/prop-types": "off"
+		},
+		"ignorePatterns": [
+			"analysis-scripts",
+			"dataset",
+			"public"
+		]
+	},
+	"dependencies": {
+		"gatsby": "^3.6.2",
+		"gatsby-plugin-manifest": "^3.8.0",
+		"gatsby-plugin-offline": "^4.8.0",
+		"gatsby-plugin-react-helmet": "^4.8.0",
+		"gatsby-plugin-sass": "^4.8.0",
+		"gatsby-plugin-sitemap": "^4.4.0",
+		"plotly.js-cartesian-dist-min": "^2.1.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-helmet": "^6.1.0",
+		"react-plotly.js": "^2.5.1",
+		"react-scrollspy": "^3.4.3",
+		"react-waypoint": "^10.1.0",
+		"sass": "^1.35.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.29.0",
+		"eslint-config-iamnapo": "^15.0.0",
+		"eslint-plugin-import": "^2.23.4",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-react": "^7.24.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"eslint-plugin-unicorn": "^33.0.1"
+	}
 }

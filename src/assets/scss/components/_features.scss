@@ -6,7 +6,9 @@
 
 /* Features */
 
-	.features {
+	@use "sass:math";
+
+.features {
 		@include vendor('display', 'flex');
 		@include vendor('flex-wrap', 'wrap');
 		@include vendor('justify-content', 'center');
@@ -16,7 +18,7 @@
 		list-style: none;
 
 		li {
-			width: calc(#{(100% / 3)} - #{_size(element-margin)});
+			width: calc(#{math.div(100%, 3)} - #{_size(element-margin)});
 			margin-left: _size(element-margin);
 			margin-top: (_size(element-margin) * 1.5);
 			padding: 0;
@@ -34,7 +36,7 @@
 
 		@include breakpoint(medium) {
 			li {
-				width: calc(#{(100% / 2)} - #{_size(element-margin)});
+				width: calc(#{(100% * 0.5)} - #{_size(element-margin)});
 
 				&:nth-child(3) {
 					margin-top: (_size(element-margin) * 1.5);

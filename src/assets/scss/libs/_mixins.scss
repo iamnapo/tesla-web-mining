@@ -1,6 +1,8 @@
 /// Makes an element's :before pseudoelement a FontAwesome icon.
 /// @param {string} $content Optional content value to use.
 /// @param {string} $where Optional pseudoelement to target (before or after).
+@use "sass:math";
+
 @mixin icon($content: false, $where: before) {
 
 	text-decoration: none;
@@ -103,7 +105,7 @@
 @mixin flexgrid-columns($columns) {
 
 	> * {
-		$cell-width: 100% / $columns;
+		$cell-width: math.div(100%, $columns);
 		width: #{$cell-width};
 	}
 
@@ -116,7 +118,7 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $columns;
+			$cell-width: math.div(100%, $columns);
 
 			padding: ($gutters * 0.5);
 			width: $cell-width;
@@ -131,8 +133,8 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: $gutters / $columns;
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -159,8 +161,8 @@
 	// Adjust widths of leftmost and rightmost cells.
 		> :nth-child(#{$columns}n + 1),
 		> :nth-child(#{$columns}n) {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: ($gutters / $columns) - ($gutters / 2);
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns) - ($gutters * 0.5);
 
 			width: calc(#{$cell-width} + #{$cell-width-pad});
 		}
@@ -176,8 +178,8 @@
 
 	// Apply padding.
 		> * {
-			$cell-width: 100% / $prev-columns;
-			$cell-width-pad: $gutters / $prev-columns;
+			$cell-width: math.div(100%, $prev-columns);
+			$cell-width-pad: math.div($gutters, $prev-columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
@@ -204,8 +206,8 @@
 	// Adjust widths of leftmost and rightmost cells.
 		> :nth-child(#{$prev-columns}n + 1),
 		> :nth-child(#{$prev-columns}n) {
-			$cell-width: 100% / $columns;
-			$cell-width-pad: $gutters / $columns;
+			$cell-width: math.div(100%, $columns);
+			$cell-width-pad: math.div($gutters, $columns);
 
 			padding: ($gutters * 0.5);
 			width: calc(#{$cell-width} + #{$cell-width-pad});
