@@ -1,7 +1,7 @@
 import * as React from "react";
 import Helmet from "react-helmet";
 import { Waypoint } from "react-waypoint";
-import Plotly from "plotly.js-cartesian-dist-min";
+import Plotly from "plotly.js-strict-dist-min";
 import createPlotlyComponent from "react-plotly.js/factory";
 
 import Layout from "../components/layout";
