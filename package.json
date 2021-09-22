@@ -45,28 +45,28 @@
 		]
 	},
 	"dependencies": {
-		"gatsby": "^3.13.0",
-		"gatsby-plugin-manifest": "^3.13.0",
-		"gatsby-plugin-offline": "^4.13.0",
-		"gatsby-plugin-react-helmet": "^4.13.0",
-		"gatsby-plugin-sass": "^4.13.0",
-		"gatsby-plugin-sitemap": "^4.9.0",
-		"plotly.js-strict-dist-min": "^2.5.0",
+		"gatsby": "^3.14.0",
+		"gatsby-plugin-manifest": "^3.14.0",
+		"gatsby-plugin-offline": "^4.14.0",
+		"gatsby-plugin-react-helmet": "^4.14.0",
+		"gatsby-plugin-sass": "^4.14.0",
+		"gatsby-plugin-sitemap": "^4.10.0",
+		"plotly.js-strict-dist-min": "^2.5.1",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-helmet": "^6.1.0",
 		"react-plotly.js": "^2.5.1",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.1.0",
-		"sass": "^1.39.0"
+		"sass": "^1.42.1"
 	},
 	"devDependencies": {
 		"eslint": "^7.32.0",
 		"eslint-config-iamnapo": "^16.1.0",
 		"eslint-plugin-import": "^2.24.2",
 		"eslint-plugin-jsx-a11y": "^6.4.1",
-		"eslint-plugin-react": "^7.25.1",
+		"eslint-plugin-react": "^7.26.0",
 		"eslint-plugin-react-hooks": "^4.2.0",
-		"eslint-plugin-unicorn": "^35.0.0"
+		"eslint-plugin-unicorn": "^36.0.0"
 	}
 }
