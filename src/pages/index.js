@@ -47,9 +47,9 @@ const Index = () => {
 						</p>
 					</header>
 					<Plot
+						useResizeHandler
 						data={[{ x: tweetsTime, type: "histogram", marker: { color: "blue", opacity: 0.75 } }]}
 						layout={{ bargap: 0.2, autosize: true }}
-						useResizeHandler
 						style={{ width: "100%" }}
 					/>
 					<p>{"Distribution of 154.717 collected tweets over time"}</p>
@@ -70,6 +70,7 @@ const Index = () => {
 					<div align="center"><img src={mostCommon} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of 200 most common keywords/hashtags"}</p>
 					<Plot
+						useResizeHandler
 						data={mostCommonJson.data.map((el) => ({
 							x: mostCommonJson.ticks,
 							y: el.y,
@@ -80,7 +81,6 @@ const Index = () => {
 							xaxis: { ticktext: mostCommonJson.labels, tickvals: mostCommonJson.ticks, showgrid: true },
 							yaxis: { showticklabels: false },
 						}}
-						useResizeHandler
 						style={{ width: "100%" }}
 					/>
 					<p>{"Distribution of hashtags over time"}</p>
@@ -310,6 +310,7 @@ const Index = () => {
 					</header>
 					<h3 style={{ textAlign: "left" }}><b>{"Overall Sentiment"}</b></h3>
 					<Plot
+						useResizeHandler
 						data={ovSentimentPerDay.data.map((el) => ({
 							x: ovSentimentPerDay.ticks,
 							y: el.y,
@@ -318,11 +319,11 @@ const Index = () => {
 							marker: { color: el.color },
 						}))}
 						layout={{ xaxis: { ticktext: ovSentimentPerDay.labels, tickvals: ovSentimentPerDay.ticks }, barmode: "relative", autosize: true }}
-						useResizeHandler
 						style={{ width: "100%" }}
 					/>
 					<p>{"Sentiment of tweets over time"}</p>
 					<Plot
+						useResizeHandler
 						data={[{
 							x: ovPolarityPerDay.ticks,
 							y: ovPolarityPerDay.data,
@@ -334,11 +335,11 @@ const Index = () => {
 							xaxis: { ticktext: ovPolarityPerDay.labels, tickvals: ovPolarityPerDay.ticks },
 							autosize: true,
 						}}
-						useResizeHandler
 						style={{ width: "100%" }}
 					/>
 					<p>{"Polarity of tweets over time"}</p>
 					<Plot
+						useResizeHandler
 						data={sentPerDayJson.data.map((el) => ({
 							x: sentPerDayJson.ticks,
 							y: el.y,
@@ -352,7 +353,6 @@ const Index = () => {
 							yaxis: { showticklabels: false },
 							autosize: true,
 						}}
-						useResizeHandler
 						style={{ width: "100%" }}
 					/>
 					<p>{"Sentiment value over time"}</p>
@@ -393,6 +393,7 @@ const Index = () => {
 						<p>{"In this part of the project, our task is to extract information of users' geographic locations based on their tweets."}</p>
 					</header>
 					<Plot
+						useResizeHandler
 						data={[{
 							lat: geoLocJson.lat,
 							lon: geoLocJson.lon,
@@ -421,7 +422,6 @@ const Index = () => {
 								pad: 2,
 							},
 						}}
-						useResizeHandler
 						style={{ width: "100%", height: "150%" }}
 					/>
 					<p>{"Location and sentiment of tweets"}</p>

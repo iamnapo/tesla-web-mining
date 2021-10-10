@@ -20,6 +20,7 @@ const Scroll = ({ type, element, offset = 0, timeout, children }) => {
 				default:
 			}
 		}
+
 		if (scroll) {
 			const elemPos = elem ? elem.getBoundingClientRect().top + window.pageYOffset : 0;
 			if (timeout) {
@@ -37,7 +38,7 @@ const Scroll = ({ type, element, offset = 0, timeout, children }) => {
 			{typeof (children) === "object" ? (
 				React.cloneElement(children, { onClick: handleClick })
 			) : (
-				<span tabIndex={0} onKeyPress={handleClick} role="button" onClick={handleClick}>{children}</span>
+				<span tabIndex={0} role="button" onKeyPress={handleClick} onClick={handleClick}>{children}</span>
 			)}
 		</Element>
 	);
