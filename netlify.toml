@@ -1,9 +1,6 @@
 [dev]
-command = "npm run develop"
-
-[build.environment]
-NPM_FLAGS = "--legacy-peer-deps"
+	command = "npm run develop"
 
 [[headers]]
-for = "/*.pdf"
-values = { Cache-Control = "no-store" }
+	for = "/*.pdf"
+	values = { cache-control = "no-store" }
