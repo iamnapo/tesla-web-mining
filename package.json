@@ -27,7 +27,7 @@
 		"test": "eslint . --ext .js --cache"
 	},
 	"eslintConfig": {
-		"extends": "iamnapo/with-react",
+		"extends": "iamnapo/react",
 		"rules": {
 			"no-unused-vars": [
 				"error",
@@ -45,23 +45,25 @@
 		]
 	},
 	"dependencies": {
-		"gatsby": "^3.14.3",
-		"gatsby-plugin-manifest": "^3.14.0",
-		"gatsby-plugin-offline": "^4.14.0",
-		"gatsby-plugin-react-helmet": "^4.14.0",
-		"gatsby-plugin-sass": "^4.14.0",
-		"gatsby-plugin-sitemap": "^4.10.0",
-		"plotly.js-strict-dist-min": "^2.5.1",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
+		"gatsby": "^4.11.1",
+		"gatsby-link": "^4.11.1",
+		"gatsby-plugin-manifest": "^4.11.1",
+		"gatsby-plugin-offline": "^5.11.1",
+		"gatsby-plugin-react-helmet": "^5.11.0",
+		"gatsby-plugin-sass": "^5.11.1",
+		"gatsby-plugin-sitemap": "^5.11.1",
+		"gatsby-react-router-scroll": "^5.11.0",
+		"plotly.js-strict-dist-min": "^2.11.1",
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
 		"react-helmet": "^6.1.0",
 		"react-plotly.js": "^2.5.1",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.1.0",
-		"sass": "^1.43.2"
+		"sass": "^1.49.11"
 	},
 	"devDependencies": {
-		"eslint": "^7.32.0",
-		"eslint-config-iamnapo": "^18.0.0"
+		"eslint": "^8.12.0",
+		"eslint-config-iamnapo": "^24.0.0"
 	}
 }
