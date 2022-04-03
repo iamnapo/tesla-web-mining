@@ -21,9 +21,9 @@
 	],
 	"scripts": {
 		"build": "gatsby build",
+		"clean": "gatsby clean",
 		"develop": "gatsby develop",
 		"serve": "gatsby serve",
-		"clean": "gatsby clean",
 		"test": "eslint . --ext .js --cache"
 	},
 	"eslintConfig": {
@@ -35,8 +35,8 @@
 					"varsIgnorePattern": "React"
 				}
 			],
-			"unicorn/prefer-module": "off",
-			"react/prop-types": "off"
+			"react/prop-types": "off",
+			"unicorn/prefer-module": "off"
 		},
 		"ignorePatterns": [
 			"analysis-scripts",
@@ -46,13 +46,6 @@
 	},
 	"dependencies": {
 		"gatsby": "^4.11.1",
-		"gatsby-link": "^4.11.1",
-		"gatsby-plugin-manifest": "^4.11.1",
-		"gatsby-plugin-offline": "^5.11.1",
-		"gatsby-plugin-react-helmet": "^5.11.0",
-		"gatsby-plugin-sass": "^5.11.1",
-		"gatsby-plugin-sitemap": "^5.11.1",
-		"gatsby-react-router-scroll": "^5.11.0",
 		"plotly.js-strict-dist-min": "^2.11.1",
 		"react": "^18.0.0",
 		"react-dom": "^18.0.0",
@@ -64,6 +57,14 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.12.0",
-		"eslint-config-iamnapo": "^24.0.0"
+		"eslint-config-iamnapo": "^24.0.0",
+		"gatsby-link": "^4.11.1",
+		"gatsby-plugin-manifest": "^4.11.1",
+		"gatsby-plugin-netlify": "^4.1.0",
+		"gatsby-plugin-offline": "^5.11.1",
+		"gatsby-plugin-react-helmet": "^5.11.0",
+		"gatsby-plugin-sass": "^5.11.1",
+		"gatsby-plugin-sitemap": "^5.11.1",
+		"gatsby-react-router-scroll": "^5.11.0"
 	}
 }
