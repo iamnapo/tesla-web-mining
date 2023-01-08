@@ -9,14 +9,18 @@ const Scroll = ({ type, element, offset = 0, timeout, children }) => {
 		let scroll = true;
 		if (type && element) {
 			switch (type) {
-				case "class":
+				case "class": {
 					elem = document.querySelectorAll(`.${element}`)[0];
 					scroll = !!elem;
 					break;
-				case "id":
+				}
+
+				case "id": {
 					elem = document.querySelector(`#${element}`);
 					scroll = !!elem;
 					break;
+				}
+
 				default:
 			}
 		}

@@ -1,8 +1,8 @@
 # Part 2 of the Web Data Mining course @ DWS MSc
 
-[![Netlify](https://api.netlify.com/api/v1/badges/d2a44cad-ed48-404e-b976-cdfbe125a320/deploy-status)](https://twitter-analysis.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d2a44cad-ed48-404e-b976-cdfbe125a320/deploy-status)](https://tesla.iamnapo.me/)
 
-<h2 align="center"><a href="https://github.com/iamnapo/tesla-web-mining/raw/master/src/assets/report.pdf" download>Our report</a></h2>
+<h2 align="center"><a href="https://github.com/iamnapo/tesla-web-mining/raw/main/src/assets/report.pdf" download>Our report</a></h2>
 
 ## Repository structure
 

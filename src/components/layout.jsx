@@ -2,7 +2,7 @@ import * as React from "react";
 
 import "../assets/scss/main.scss";
 
-import Footer from "./footer";
+import Footer from "./footer.jsx";
 
 const Layout = ({ children }) => {
 	const [loading, setLoading] = React.useState("is-loading");

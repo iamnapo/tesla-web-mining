@@ -10,9 +10,9 @@ const Footer = () => (
 				<dt>{"Website:"}</dt>
 				<dd><a href="https://github.com/iamnapo/tesla-web-mining">{"https://github.com/iamnapo/tesla-web-mining"}</a></dd>
 				<dt>{"Dataset:"}</dt>
-				<dd><a href="https://github.com/iamnapo/tesla-web-mining/tree/master/dataset">{"https://github.com/iamnapo/tesla-web-mining/tree/master/dataset"}</a></dd>
+				<dd><a href="https://github.com/iamnapo/tesla-web-mining/tree/main/dataset">{"https://github.com/iamnapo/tesla-web-mining/tree/main/dataset"}</a></dd>
 				<dt>{"Scripts:"}</dt>
-				<dd><a href="https://github.com/iamnapo/tesla-web-mining/tree/master/analysis-scripts">{"https://github.com/iamnapo/tesla-web-mining/tree/master/analysis-scripts"}</a></dd>
+				<dd><a href="https://github.com/iamnapo/tesla-web-mining/tree/main/analysis-scripts">{"https://github.com/iamnapo/tesla-web-mining/tree/main/analysis-scripts"}</a></dd>
 				<dt>{"Report:"}</dt>
 				<dd><a href={report} download="report.pdf">{"report.pdf"}</a></dd>
 			</dl>

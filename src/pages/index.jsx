@@ -1,12 +1,11 @@
 import * as React from "react";
-import Helmet from "react-helmet";
 import { Waypoint } from "react-waypoint";
 import Plotly from "plotly.js-strict-dist-min";
 import createPlotlyComponent from "react-plotly.js/factory";
 
-import Layout from "../components/layout";
-import Header from "../components/header";
-import Nav from "../components/nav";
+import Layout from "../components/layout.jsx";
+import Header from "../components/header.jsx";
+import Nav from "../components/nav.jsx";
 import tweetsTime from "../assets/jsons/tweets_time.json";
 import mostCommon from "../assets/images/200_most_common_words.png";
 import anger from "../assets/images/anger.png";
@@ -24,12 +23,13 @@ import loc from "../assets/images/loc.png";
 
 const Plot = typeof (window) === "undefined" ? () => <div /> : createPlotlyComponent(Plotly);
 
+export const Head = () => <title>{"#Tesla twitter analysis"}</title>;
+
 const Index = () => {
 	const [stickyNav, setStickyNav] = React.useState(false);
 
 	return (
 		<Layout>
-			<Helmet title="#Tesla twitter analysis" />
 			<Header />
 			<Waypoint onEnter={() => setStickyNav(false)} onLeave={() => setStickyNav(true)} />
 			<Nav sticky={stickyNav} />
@@ -67,7 +67,7 @@ const Index = () => {
 						<p>{"In this part of the project, we attempt to extract information about what twitter users talk about in their tweets and if topics of discussion can indicate real-life events."}</p>
 						<br />
 					</header>
-					<div align="center"><img src={mostCommon} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={mostCommon} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of 200 most common keywords/hashtags"}</p>
 					<Plot
 						useResizeHandler
@@ -361,27 +361,27 @@ const Index = () => {
 					<h3 style={{ textAlign: "left" }}><b>{"Specific Emotions"}</b></h3>
 					<br />
 					<br />
-					<div align="center"><img src={anger} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={anger} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"anger\" tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={joy} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={joy} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"joy\" tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={fear} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={fear} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"fear\" tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={sadness} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={sadness} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"sadness\" tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={surprise} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={surprise} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"surprise\" tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={disgust} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={disgust} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of most common keywords/hashtags in \"disgust\" tweets"}</p>
 					<br />
 					<br />
@@ -427,7 +427,7 @@ const Index = () => {
 					<p>{"Location and sentiment of tweets"}</p>
 					<br />
 					<br />
-					<div align="center"><img src={loc} alt="" style={{ width: "70%" }} /></div>
+					<div><img src={loc} alt="" style={{ width: "70%" }} /></div>
 					<p>{"Word-cloud of the most common tweet locations"}</p>
 					<br />
 					<br />

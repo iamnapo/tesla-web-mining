@@ -24,7 +24,7 @@
 		"clean": "gatsby clean",
 		"develop": "gatsby develop",
 		"serve": "gatsby serve",
-		"test": "eslint . --ext .js --cache"
+		"test": "eslint . --ext .jsx,.js --cache"
 	},
 	"eslintConfig": {
 		"extends": "iamnapo/react",
@@ -45,26 +45,24 @@
 		]
 	},
 	"dependencies": {
-		"gatsby": "^4.11.1",
-		"plotly.js-strict-dist-min": "^2.11.1",
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
-		"react-helmet": "^6.1.0",
-		"react-plotly.js": "^2.5.1",
+		"gatsby": "^5.3.3",
+		"plotly.js-strict-dist-min": "^2.17.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-plotly.js": "^2.6.0",
 		"react-scrollspy": "^3.4.3",
-		"react-waypoint": "^10.1.0",
-		"sass": "^1.49.11"
+		"react-waypoint": "^10.3.0",
+		"sass": "^1.57.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.12.0",
-		"eslint-config-iamnapo": "^24.0.0",
-		"gatsby-link": "^4.11.1",
-		"gatsby-plugin-manifest": "^4.11.1",
-		"gatsby-plugin-netlify": "^4.1.0",
-		"gatsby-plugin-offline": "^5.11.1",
-		"gatsby-plugin-react-helmet": "^5.11.0",
-		"gatsby-plugin-sass": "^5.11.1",
-		"gatsby-plugin-sitemap": "^5.11.1",
-		"gatsby-react-router-scroll": "^5.11.0"
+		"eslint": "^8.31.0",
+		"eslint-config-iamnapo": "^28.0.0",
+		"gatsby-link": "^5.3.1",
+		"gatsby-plugin-manifest": "^5.3.1",
+		"gatsby-plugin-netlify": "^5.1.0",
+		"gatsby-plugin-offline": "^6.3.1",
+		"gatsby-plugin-sass": "^6.3.1",
+		"gatsby-plugin-sitemap": "^6.3.1",
+		"gatsby-react-router-scroll": "^6.3.0"
 	}
 }

@@ -2,7 +2,7 @@
 import React from "react";
 import Scrollspy from "react-scrollspy";
 
-import Scroll from "./scroll";
+import Scroll from "./scroll.jsx";
 
 const Nav = ({ sticky }) => (
 	<nav id="nav" className={sticky ? "alt" : ""}>
