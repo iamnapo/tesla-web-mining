@@ -53,7 +53,8 @@
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.3.0",
 		"sass": "^1.62.1",
-		"socket.io": "^4.6.1"
+		"socket.io": "^4.6.1",
+		"socket.io-client": "^4.6.1"
 	},
 	"devDependencies": {
 		"eslint": "^8.40.0",
@@ -67,6 +68,7 @@
 		"gatsby-react-router-scroll": "^6.9.0"
 	},
 	"overrides": {
-		"socket.io": "$socket.io"
+		"socket.io": "$socket.io",
+		"socket.io-client": "$socket.io-client"
 	}
 }
