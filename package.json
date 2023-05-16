@@ -45,30 +45,24 @@
 		]
 	},
 	"dependencies": {
-		"gatsby": "^5.9.0",
-		"plotly.js-strict-dist-min": "^2.22.0",
+		"gatsby": "^5.10.0",
+		"plotly.js-strict-dist-min": "^2.23.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-plotly.js": "^2.6.0",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.3.0",
-		"sass": "^1.62.1",
-		"socket.io": "^4.6.1",
-		"socket.io-client": "^4.6.1"
+		"sass": "^1.62.1"
 	},
 	"devDependencies": {
 		"eslint": "^8.40.0",
-		"eslint-config-iamnapo": "^29.1.0",
-		"gatsby-link": "^5.9.0",
-		"gatsby-plugin-manifest": "^5.9.0",
+		"eslint-config-iamnapo": "^30.0.0",
+		"gatsby-link": "^5.10.0",
+		"gatsby-plugin-manifest": "^5.10.0",
 		"gatsby-plugin-netlify": "^5.1.0",
-		"gatsby-plugin-offline": "^6.9.0",
-		"gatsby-plugin-sass": "^6.9.0",
-		"gatsby-plugin-sitemap": "^6.9.0",
-		"gatsby-react-router-scroll": "^6.9.0"
-	},
-	"overrides": {
-		"socket.io": "$socket.io",
-		"socket.io-client": "$socket.io-client"
+		"gatsby-plugin-offline": "^6.10.0",
+		"gatsby-plugin-sass": "^6.10.0",
+		"gatsby-plugin-sitemap": "^6.10.0",
+		"gatsby-react-router-scroll": "^6.10.0"
 	}
 }
