@@ -46,7 +46,7 @@
 	},
 	"dependencies": {
 		"gatsby": "^5.10.0",
-		"plotly.js-strict-dist-min": "^2.23.0",
+		"plotly.js-strict-dist-min": "^2.23.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-plotly.js": "^2.6.0",
@@ -55,7 +55,7 @@
 		"sass": "^1.62.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.40.0",
+		"eslint": "^8.41.0",
 		"eslint-config-iamnapo": "^30.0.0",
 		"gatsby-link": "^5.10.0",
 		"gatsby-plugin-manifest": "^5.10.0",
