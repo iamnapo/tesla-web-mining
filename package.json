@@ -29,14 +29,7 @@
 	"eslintConfig": {
 		"extends": "iamnapo/react",
 		"rules": {
-			"no-unused-vars": [
-				"error",
-				{
-					"varsIgnorePattern": "React"
-				}
-			],
-			"react/prop-types": "off",
-			"unicorn/prefer-module": "off"
+			"react/prop-types": "off"
 		},
 		"ignorePatterns": [
 			"analysis-scripts",

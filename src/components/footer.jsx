@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import report from "../assets/report.pdf";
 
 const Footer = () => (

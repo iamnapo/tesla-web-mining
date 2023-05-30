@@ -1,4 +1,5 @@
-module.exports = {
+const config = {
+	jsxRuntime: "automatic",
 	siteMetadata: {
 		siteUrl: "https://www.tesla.iamnapo.me",
 		title: "Twitter Project of Web Data Mining course",
@@ -24,3 +25,5 @@ module.exports = {
 		"gatsby-plugin-netlify",
 	],
 };
+
+export default config;

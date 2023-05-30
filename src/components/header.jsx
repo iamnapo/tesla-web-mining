@@ -1,5 +1,3 @@
-import * as React from "react";
-
 const Header = () => (
 	<header id="header" className="alt">
 		<h1>{"#Tesla Twitter Content Analysis"}</h1>
