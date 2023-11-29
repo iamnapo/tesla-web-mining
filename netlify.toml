@@ -1,5 +1,5 @@
 [dev]
-	command = "npm run develop"
+	command = "pnpm run develop"
 
 [[headers]]
 	for = "/*.pdf"

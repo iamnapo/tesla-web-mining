@@ -23,20 +23,20 @@ All of the steps below require that you have already installed:
 - Install depencencies:
 
   ```sh
-  npm i
+  pnpm i
   ```
 
 - Run the development server:
 
   ```sh
-  npm run develop
+  pnpm run develop
   ```
 
 - Or build and serve the production bundle:
 
   ```sh
-  npm run build
-  npm run serve
+  pnpm run build
+  pnpm run serve
   ```
 
 ### Mongo dataset
