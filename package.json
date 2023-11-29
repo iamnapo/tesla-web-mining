@@ -38,23 +38,23 @@
 		]
 	},
 	"dependencies": {
-		"gatsby": "^5.12.7",
-		"plotly.js-strict-dist-min": "^2.26.2",
+		"gatsby": "^5.12.11",
+		"plotly.js-strict-dist-min": "^2.27.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-plotly.js": "^2.6.0",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.3.0",
-		"sass": "^1.69.4"
+		"sass": "^1.69.5"
 	},
 	"devDependencies": {
-		"eslint": "^8.51.0",
-		"eslint-config-iamnapo": "^32.2.0",
-		"gatsby-link": "^5.12.0",
-		"gatsby-plugin-manifest": "^5.12.1",
-		"gatsby-plugin-offline": "^6.12.1",
-		"gatsby-plugin-sass": "^6.12.1",
-		"gatsby-plugin-sitemap": "^6.12.1",
+		"eslint": "^8.54.0",
+		"eslint-config-iamnapo": "^33.0.0",
+		"gatsby-link": "^5.12.1",
+		"gatsby-plugin-manifest": "^5.12.3",
+		"gatsby-plugin-offline": "^6.12.3",
+		"gatsby-plugin-sass": "^6.12.3",
+		"gatsby-plugin-sitemap": "^6.12.3",
 		"gatsby-react-router-scroll": "^6.12.0"
 	}
 }

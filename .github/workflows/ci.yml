@@ -9,19 +9,14 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
 
-      - name: 📦 Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: ⎔ Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 21
-          cache: pnpm
+          cache: npm
 
       - name: 📥 Download deps
-        run: pnpm i
+        run: npm ci
 
       - name: 🧪 Run test script
-        run: pnpm test
+        run: npm test
