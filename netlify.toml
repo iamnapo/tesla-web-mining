@@ -1,6 +1,9 @@
 [dev]
 	command = "npm run develop"
 
+[build]
+	edge_functions = "edge-functions"
+
 [[headers]]
 	for = "/*.pdf"
 	values = { cache-control = "no-store" }
