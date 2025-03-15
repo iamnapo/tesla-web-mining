@@ -24,38 +24,27 @@
 		"clean": "gatsby clean",
 		"develop": "gatsby develop",
 		"serve": "gatsby serve",
-		"test": "eslint . --ext .jsx,.js --cache"
-	},
-	"eslintConfig": {
-		"extends": "iamnapo/react",
-		"rules": {
-			"react/prop-types": "off"
-		},
-		"ignorePatterns": [
-			"analysis-scripts",
-			"dataset",
-			"public"
-		]
+		"test": "eslint --cache"
 	},
 	"dependencies": {
-		"@netlify/edge-functions": "^2.10.0",
-		"gatsby": "^5.13.7",
-		"plotly.js-strict-dist-min": "^2.35.2",
+		"@netlify/edge-functions": "^2.11.1",
+		"gatsby": "^5.14.1",
+		"plotly.js-strict-dist-min": "^3.0.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-plotly.js": "^2.6.0",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.3.0",
-		"sass": "^1.79.3"
+		"sass": "^1.85.1"
 	},
 	"devDependencies": {
-		"eslint": "^8.57.0",
-		"eslint-config-iamnapo": "^36.0.0",
-		"gatsby-link": "^5.13.1",
-		"gatsby-plugin-manifest": "^5.13.1",
-		"gatsby-plugin-offline": "^6.13.3",
-		"gatsby-plugin-sass": "^6.13.1",
-		"gatsby-plugin-sitemap": "^6.13.1",
-		"gatsby-react-router-scroll": "^6.13.1"
+		"eslint": "^9.22.0",
+		"eslint-config-iamnapo": "^38.0.0",
+		"gatsby-link": "^5.14.1",
+		"gatsby-plugin-manifest": "^5.14.0",
+		"gatsby-plugin-offline": "^6.14.0",
+		"gatsby-plugin-sass": "^6.14.0",
+		"gatsby-plugin-sitemap": "^6.14.0",
+		"gatsby-react-router-scroll": "^6.14.0"
 	}
 }

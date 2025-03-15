@@ -21,7 +21,7 @@ import ovPolarityPerDay from "../assets/jsons/ov_polarity_per_day.json";
 import geoLocJson from "../assets/jsons/geo_loc.json";
 import loc from "../assets/images/loc.png";
 
-const Plot = typeof (window) === "undefined" ? () => <div /> : createPlotlyComponent(Plotly);
+const Plot = (globalThis.window) === undefined ? () => <div /> : createPlotlyComponent(Plotly);
 
 export const Head = () => <title>{"#Tesla twitter analysis"}</title>;
 

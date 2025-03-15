@@ -11,13 +11,13 @@ const Scroll = ({ type, element, offset = 0, timeout, children }) => {
 			switch (type) {
 				case "class": {
 					elem = document.querySelectorAll(`.${element}`)[0];
-					scroll = !!elem;
+					scroll = Boolean(elem);
 					break;
 				}
 
 				case "id": {
 					elem = document.querySelector(`#${element}`);
-					scroll = !!elem;
+					scroll = Boolean(elem);
 					break;
 				}
 
@@ -39,11 +39,13 @@ const Scroll = ({ type, element, offset = 0, timeout, children }) => {
 
 	return (
 		<Element>
-			{typeof (children) === "object" ? (
-				React.cloneElement(children, { onClick: handleClick })
-			) : (
-				<span tabIndex={0} role="button" onKeyPress={handleClick} onClick={handleClick}>{children}</span>
-			)}
+			{typeof (children) === "object"
+				? (
+					React.cloneElement(children, { onClick: handleClick })
+				)
+				: (
+					<span tabIndex={0} role="button" onKeyPress={handleClick} onClick={handleClick}>{children}</span>
+				)}
 		</Element>
 	);
 };
