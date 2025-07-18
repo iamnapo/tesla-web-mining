@@ -27,18 +27,18 @@
 		"test": "eslint --cache"
 	},
 	"dependencies": {
-		"@netlify/edge-functions": "^2.11.1",
-		"gatsby": "^5.14.1",
+		"@netlify/edge-functions": "^2.15.8",
+		"gatsby": "^5.14.5",
 		"plotly.js-strict-dist-min": "^3.0.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-plotly.js": "^2.6.0",
 		"react-scrollspy": "^3.4.3",
 		"react-waypoint": "^10.3.0",
-		"sass": "^1.85.1"
+		"sass": "^1.89.2"
 	},
 	"devDependencies": {
-		"eslint": "^9.22.0",
+		"eslint": "^9.31.0",
 		"eslint-config-iamnapo": "^38.0.0",
 		"gatsby-link": "^5.14.1",
 		"gatsby-plugin-manifest": "^5.14.0",
