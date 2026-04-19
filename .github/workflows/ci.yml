@@ -5,18 +5,23 @@ on: push
 jobs:
   ci:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v4
+      - name: ⎔ Setup pnpm
+        uses: pnpm/action-setup@v5
+
+      - name: ⎔ Setup Node
+        uses: actions/setup-node@v6
         with:
-          node-version: 22
-          cache: npm
+          node-version: 24
+          cache: pnpm
 
       - name: 📥 Download deps
-        run: npm ci
+        run: pnpm i
 
       - name: 🧪 Run test script
         run: npm test

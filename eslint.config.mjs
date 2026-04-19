@@ -1,17 +1,17 @@
+import { defineConfig, globalIgnores } from "eslint/config";
 import eslintConfigIamnapo from "eslint-config-iamnapo";
 
-/** @type {import('eslint').Linter.Config} */
-const config = [
-	...eslintConfigIamnapo.configs.react.map((cfg) => ({
-		...cfg,
+const config = defineConfig([
+	{
+		extends: [eslintConfigIamnapo.configs.react],
 		files: [eslintConfigIamnapo.filePatterns.react],
-	})),
+	},
 	{
 		rules: {
 			"react/prop-types": "off",
 		},
 	},
-	{ ignores: ["analysis-scripts", "dataset", "public"] },
-];
+	globalIgnores(["analysis-scripts", "dataset", "public"]),
+]);
 
 export default config;

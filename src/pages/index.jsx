@@ -1,25 +1,25 @@
-import * as React from "react";
-import { Waypoint } from "react-waypoint";
 import Plotly from "plotly.js-strict-dist-min";
+import * as React from "react";
 import createPlotlyComponent from "react-plotly.js/factory";
+import { Waypoint } from "react-waypoint";
 
-import Layout from "../components/layout.jsx";
-import Header from "../components/header.jsx";
-import Nav from "../components/nav.jsx";
-import tweetsTime from "../assets/jsons/tweets_time.json";
 import mostCommon from "../assets/images/200_most_common_words.png";
 import anger from "../assets/images/anger.png";
-import joy from "../assets/images/joy.png";
+import disgust from "../assets/images/disgust.png";
 import fear from "../assets/images/fear.png";
+import joy from "../assets/images/joy.png";
+import loc from "../assets/images/loc.png";
 import sadness from "../assets/images/sadness.png";
 import surprise from "../assets/images/surprise.png";
-import disgust from "../assets/images/disgust.png";
-import mostCommonJson from "../assets/jsons/most_common.json";
-import sentPerDayJson from "../assets/jsons/sent_per_day.json";
-import ovSentimentPerDay from "../assets/jsons/ov_sentiment_per_day.json";
-import ovPolarityPerDay from "../assets/jsons/ov_polarity_per_day.json";
 import geoLocJson from "../assets/jsons/geo_loc.json";
-import loc from "../assets/images/loc.png";
+import mostCommonJson from "../assets/jsons/most_common.json";
+import ovPolarityPerDay from "../assets/jsons/ov_polarity_per_day.json";
+import ovSentimentPerDay from "../assets/jsons/ov_sentiment_per_day.json";
+import sentPerDayJson from "../assets/jsons/sent_per_day.json";
+import tweetsTime from "../assets/jsons/tweets_time.json";
+import Header from "../components/header.jsx";
+import Layout from "../components/layout.jsx";
+import Nav from "../components/nav.jsx";
 
 const Plot = (globalThis.window) === undefined ? () => <div /> : createPlotlyComponent(Plotly);
 
